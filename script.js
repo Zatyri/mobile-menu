@@ -11,7 +11,9 @@ function showMenu(){
 }
 
 // keep menu aligned to page
-window.onscroll = function(){            
-    let currentPos = window.pageYOffset;        
-    document.getElementById("navbar").style.top = currentPos + "px";
+window.onscroll = function(){   
+    if(window.innerWidth < 768){         
+        let currentPos = window.pageYOffset;      
+        document.getElementById("navbar").style.top = currentPos + "px";
+    }
 }

@@ -85,7 +85,7 @@ Nav content
 *****************************************/
 .menuContent {
     position: relative;
-    right: -100%;  
+    top: -100%;  
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
@@ -93,7 +93,7 @@ Nav content
     align-items: center;
     z-index: 1;   
     height: 100%;
-    width: 0%;
+    width: 100%;
     overflow: hidden;
     background-color: rgb(175, 175, 175);
     -webkit-transition: 0.5s ease-in;
@@ -102,13 +102,53 @@ Nav content
     transition: 0.5s ease-in;
 }
 
+.menuContent > div {
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .showMenu {
+    top: 0%;
     right: 0%;
     width: 100%;
     height: 100%;
 }
 
-.menuContent button {
-    width: 80%;
+.menuContent button {    
     margin: 1rem;
+}
+/******************************
+End of nav content
+********************************/
+/********************************
+Media Queries
+************************************/
+@media only screen and (min-width: 768px) {
+    nav {
+        position: static;
+        height: unset;
+    }
+    /* hide meny button on larger screen */   
+    .menuBackground {        
+        display: none;
+    }
+    .menuContent {
+        position: static;
+        right: unset;        
+        z-index: unset;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+        height: unset;
+        width: 100%;
+    }
+
+    .menuContent > div {
+        display: flex;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        justify-content: center;
+    }
 }
