@@ -1,0 +1,114 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+nav {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+/*********************************
+Menu buttons
+*********************************/
+/* Hamburger */
+.menuBackground {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    background-color: rgb(100, 100, 100);
+    opacity: 0.8;
+    width: 66px;
+    height: 66px;
+    margin: 0.4rem;
+    border-radius: 50%;
+}
+
+.menuButton{
+    position: relative;
+    left: 13px;
+    top: 8px;  
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.menuButton > .bar1, .bar2, .bar3 {
+    position: absolute;
+    display:  block;
+    width: 100%;
+    height: 9px;
+    background-color: rgb(0, 0, 0);
+    margin: 6px 0;
+    border-radius: 9px;    
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.menuButton > .bar1 {
+    top: 0px;
+}
+
+.menuButton > .bar2 {
+    top: 15px;
+}
+
+.menuButton > .bar3 {
+    top: 30px;
+}
+
+.animateMenu .bar2 {
+    opacity: 0;
+}
+
+.animateMenu .bar1 {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    top: 15px;
+}
+
+.animateMenu .bar3 {
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: 15px;
+}
+
+/****************************************
+End of menu button
+*****************************************/
+/***************************************
+Nav content
+*****************************************/
+.menuContent {
+    position: relative;
+    right: -100%;  
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;   
+    height: 100%;
+    width: 0%;
+    overflow: hidden;
+    background-color: rgb(175, 175, 175);
+    -webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;    
+    transition: 0.5s ease-in;
+}
+
+.showMenu {
+    right: 0%;
+    width: 100%;
+    height: 100%;
+}
+
+.menuContent button {
+    width: 80%;
+    margin: 1rem;
+}
