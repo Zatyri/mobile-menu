@@ -85,12 +85,13 @@ Nav content
 *****************************************/
 .menuContent {
     position: relative;
-    top: -100%;  
+    top: -100%;
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    visibility: hidden;
     z-index: 1;   
     height: 100%;
     width: 100%;
@@ -110,6 +111,7 @@ Nav content
 }
 
 .showMenu {
+    visibility: visible;
     top: 0%;
     right: 0%;
     width: 100%;
